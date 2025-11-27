@@ -1,4 +1,4 @@
-from implements import NetworkTicket, SoftwareTicket
+from .implements import NetworkTicket, SoftwareTicket
 
 class TicketFactory:
 

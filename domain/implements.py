@@ -1,4 +1,4 @@
-from interfaces import Ticket, Observer
+from .interfaces import Observer, Ticket
 
 class ITUser(Observer):
     def __init__(self, name):

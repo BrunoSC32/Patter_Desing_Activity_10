@@ -1,8 +1,11 @@
-from interfaces import Ticket
+from .interfaces import Ticket
 
 class TicketDecorator(Ticket):
     def __init__(self, wrapped_ticket):
         self.wrapped_ticket = wrapped_ticket
+
+    def __getattr__(self, item):
+        return getattr(self.wrapped_ticket, item)
 
     def display_info(self):
         return self.wrapped_ticket.display_info()
